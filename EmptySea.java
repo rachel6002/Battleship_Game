@@ -5,10 +5,10 @@
  *
  * @author Huifang Ye & Rachel Kong
  */
-public class EmptySea extends Ship {
+public class EmptySea extends Ship{
 	/**
-	 * Sets the inherited length variable and initializes the hit array, based on
-	 * the size of this Empty Sea (1 tiles).
+	 * Sets the inherited length variable and initializes the hit
+	 * array, based on the size of this Empty Sea (1 tiles).
 	 */
 	public EmptySea() {
 		length = 1;
@@ -24,21 +24,22 @@ public class EmptySea extends Ship {
 	}
 
 	/**
-	 * Since an EmptySea is empty by definition, shooting at one will always be a
-	 * miss.
+	 * Since an EmptySea is empty by definition, shooting
+	 * at one will always be a miss.
 	 *
-	 * @param row the row of the shot
-	 * @param col the column of the shot
-	 * @return false always, since nothing will be hit.
+	 * @param row    the row of the shot
+	 * @param col    the column of the shot
+	 * @return       false always, since nothing will be hit.
 	 */
 	@Override
-	public boolean shootAt(int row, int col) {
+	public boolean shootAt(int row,
+	                       int col) {
 		return false;
 	}
 
 	/**
-	 * Since an EmptySea is empty by definition, it is not possible that one can be
-	 * sunk.
+	 * Since an EmptySea is empty by definition, it is not
+	 * possible that one can be sunk.
 	 *
 	 * @return false always, since nothing will be hit.
 	 */
@@ -53,6 +54,10 @@ public class EmptySea extends Ship {
 	 */
 	@Override
 	public String toString() {
-
+		if (isSunk()) {
+			return "x";
+		} else {
+			return "S";
+		}
 	}
 }
