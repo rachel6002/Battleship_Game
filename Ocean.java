@@ -1,8 +1,9 @@
+import java.util.Random;
 /**
  * This class manages the game state by keeping track of what entity is
  * contained in each position on the game board.
  * 
- * @author harry
+ * @author Huifang Ye & Rachel Kong
  *
  */
 public class Ocean implements OceanInterface {
